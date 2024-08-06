@@ -1,0 +1,30 @@
+body{
+    background-image: url(../img/fondo.jpg);
+    background-size: 100%;
+    
+
+}
+
+
+
+.h1{
+    display: grid;
+    grid-template-columns: auto;
+    text-align: center;
+    color: rgb(104, 140, 173);
+
+}
+
+.container{
+display: grid;
+grid-template-columns: min-content min-content min-content;
+grid-template-rows: min-content min-content min-content;
+justify-content: center;
+}
+
+.cont{
+    border: solid thin rgb(46, 108, 110);
+    width: 100px;
+    height: 100px;
+    background-color: rgb(153, 202, 204);
+}
