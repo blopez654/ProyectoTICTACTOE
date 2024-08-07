@@ -1,27 +1,35 @@
-
 const cont = document.getElementsByClassName("cont");
 
 for (let index = 0; index < cont.length; index++) {
 
     cont [index].addEventListener("click", function () {
-       cont[index].innerHTML= "X"
+
+       if (cont[index].textContent== "") {
+         cont[index].textContent= "X";
+         
+       
+       let listaVacia = [];
    
-       let listaVacia = []
-   
-       for (let index = 0; index < listaVacia.length; index++) {
-          
+       for (let index = 0; index < cont.length; index++) {
          if (cont[index].textContent === "") {
-            listaVacia.push(index)
+            listaVacia.push(cont[index]);
       
          }
-            
-       };
-       
-       let numeroA = Math.floor(Math.random()*listaVacia.length)
-       listaN = listaVacia[numeroA]
-       cont[numeroA].innerHTML="O"
-       
-})};
+
+        }
+   
+         
+        if ( listaVacia.length > 0 ) {  
+          let numeroA = Math.floor(Math.random()*listaVacia.length)
+          listaVacia[numeroA].textContent="O";
+          
+        }
+         
+      }
+    let win
+
+   })
+};
     
 
 
